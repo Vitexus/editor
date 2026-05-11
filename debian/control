@@ -1,0 +1,30 @@
+Source: python-editor
+Section: python
+Priority: optional
+Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-python,
+ pybuild-plugin-pyproject,
+ python3-all,
+ python3-hatchling,
+Standards-Version: 4.7.0
+Homepage: https://github.com/rec/editor
+Rules-Requires-Root: no
+Vcs-Git: https://github.com/Vitexus/editor.git
+Vcs-Browser: https://github.com/Vitexus/editor
+
+Package: python3-editor
+Architecture: all
+Multi-Arch: foreign
+Depends:
+ ${misc:Depends},
+ ${python3:Depends},
+ python3-runs,
+ python3-xmod,
+Description: Open the default system text editor from Python
+ editor provides a simple Python interface for opening files in the
+ system's default text editor (respecting the EDITOR and VISUAL
+ environment variables).
+ .
+ This package provides the Python 3 library.
